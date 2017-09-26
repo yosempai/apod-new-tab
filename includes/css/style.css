@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,900');
 @font-face {
 	font-family:OstrichInline;
-	src: url('OstrichSansInline-Italic.otf') format("opentype");
+	src: url('../fonts/OstrichSansInline-Italic.otf') format("opentype");
 }
 
 html {
