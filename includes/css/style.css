@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Monofett');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,900');
+@font-face {
+	font-family:OstrichInline;
+	src: url('OstrichSansInline-Italic.otf') format("opentype");
+}
+
+html {
+
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background:url('starrybg.jpg');
+}
+
+body {
+	margin:0;
+	font-family: 'OstrichInline', sans-serif;
+}
+
+.greeting {
+	color:#eee;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 400%;
+	margin-top:70%;
+}
+
+.title {
+	color:#eee;
+	z-index: 999;
+	left:2.5%;
+	top:0;
+	margin:-2.5% 0 0 0;
+	font-weight: 100;
+	position: absolute;
+	font-size: 15em;
+	line-height: .75em;
+	width:90%;
+ }
+ 
+.title.smallerFont {
+	font-size: 12.5em;	
+}
+
+.tooltip {
+    position: relative;
+    right:1%;
+    top:0;
+    margin-top:-2.5%;
+    display: block;
+    font-size: 6em;
+    color:#fff;
+    text-align: right;
+    cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip > a {
+	color:#fff;
+	text-decoration: none;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: 60%;
+    font-size: .2em;
+    font-family: 'Titillium Web';
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-transition: all 0.3s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.3s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    left:5%;
+    top:280px;
+    z-index: 1000;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.3s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.3s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+ 
+.loader-section.section-left h1.greeting {
+	text-align: right;
+	margin-right:4.5%;
+}
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #222222;
+        z-index: 1000;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+			-webkit-transition: all 0.7s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+					transition: all 0.7s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+    
+    /* JavaScript Turned Off */
+    .no-js #loader-wrapper {
+        display: none;
+    }
+    .no-js h1 {
+        color: #222222;
+    }
+    
+div.video {
+	margin:0;
+	position: absolute;
+	top:50%;
+	left:5%;
+	border:20px solid black;
+}
