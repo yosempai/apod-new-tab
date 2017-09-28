@@ -1,6 +1,11 @@
 $(document).ready(function(){
    var getAPOD = function(){
 		var key = config.APOD_KEY;
+		var name = config.NAME;
+		var greeting = config.GREETING;
+
+		$("#greeting").innerHTML(greeting);
+		$("#name").innerHTML(name);
 
 	    $.getJSON("https://api.nasa.gov/planetary/apod?api_key=" + key, function(json) {
 	    	if (json != ""){
