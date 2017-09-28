@@ -1,4 +1,5 @@
 var config = {
   APOD_KEY : 'xxxxxxxxxxxxxx',
-  NAME : 'YourName'
+  NAME : 'YourName',
+  GREETING : 'Hello,'
 }
