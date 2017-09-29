@@ -4,8 +4,8 @@ $(document).ready(function(){
 		var name = config.NAME;
 		var greeting = config.GREETING;
 
-		$("#greeting").innerHTML(greeting);
-		$("#name").innerHTML(name);
+		$("#greeting").append(greeting);
+		$("#name").append(name);
 
 	    $.getJSON("https://api.nasa.gov/planetary/apod?api_key=" + key, function(json) {
 	    	if (json != ""){
